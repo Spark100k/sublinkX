@@ -32,7 +32,8 @@ curl -LO "https://github.com/gooaclok819/sublinkX/releases/download/$latest_rele
 chmod +x $file_name
 
 # 移动文件到/usr/local/bin
-sudo mv $file_name /usr/local/bin/sublink/sublink
+
+mv $file_name /usr/local/bin/sublink/sublink
 
 # 创建systemctl服务
 echo "[Unit]
@@ -42,15 +43,15 @@ Description=Sublink Service
 ExecStart=/usr/local/bin/sublink/sublink
 WorkingDirectory=/usr/local/bin/sublink
 [Install]
-WantedBy=multi-user.target" | sudo tee /etc/systemd/system/sublink.service
+WantedBy=multi-user.target" | tee /etc/systemd/system/sublink.service
 
 # 启动并启用服务
-sudo systemctl start sublink
-sudo systemctl enable sublink
-sudo systemctl daemon-reload
+systemctl start sublink
+systemctl enable sublink
+systemctl daemon-reload
 echo "服务已启动并已设置为开机启动"
 echo "默认账号admin密码123456 端口8000"
-echo "安装完成已经启动输入sudo sublink可以呼出菜单"
+echo "安装完成已经启动输入sublink可以呼出菜单"
 
 # 创建sublink_menu.sh脚本
 echo '#!/bin/bash
