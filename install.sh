@@ -11,7 +11,7 @@ mkdir sublink
 cd sublink
 
 # 获取最新的发行版标签
-latest_release=$(curl --silent "https://api.github.com/repos/gooaclok819/sublinkX/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+latest_release=$(curl --silent "https://api.github.com/repos/Spark100k/sublinkX/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 echo "最新版本: $latest_release"
 # 检测机器类型
 machine_type=$(uname -m)
@@ -26,7 +26,7 @@ else
 fi
 
 # 下载文件
-curl -LO "https://github.com/gooaclok819/sublinkX/releases/download/$latest_release/$file_name"
+curl -LO "https://github.com/Spark100k/sublinkX/releases/download/$latest_release/$file_name"
 
 # 设置文件为可执行
 chmod +x $file_name
