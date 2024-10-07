@@ -57,7 +57,7 @@ surge支持协议:ss trojan vmess hy2 tuic
 ## [安装说明]
 ### linux方式：
 ```
-curl -s https://raw.githubusercontent.com/gooaclok819/sublinkX/main/install.sh | sudo bash
+curl -s https://raw.githubusercontent.com/Spark100k/sublinkX/main/install.sh | bash
 ```
 
 linux更新方法:
