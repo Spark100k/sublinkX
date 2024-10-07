@@ -109,6 +109,6 @@ done' > sublink_menu.sh
 
 # 移动sublink_menu.sh到/usr/bin
 
-sudo mv sublink_menu.sh /usr/bin/sublink
+mv sublink_menu.sh /usr/bin/sublink
 
 chmod +x /usr/bin/sublink
